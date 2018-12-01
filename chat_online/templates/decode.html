@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Kain Huck">
+    <title>解码页面</title>
+</head>
+<body>
+<div>
+    <form action="/decode" method="post">
+        {% module xsrf_form_html() %}
+        <p><input type="text" placeholder="请输入密文" name="code"></p>
+        <p><input type="submit" value="解密" class="sub_button"></p>
+    </form>
+</div>
+<div>
+    <p>{{text}}</p>
+</div>
+</body>
+</html>

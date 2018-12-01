@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Kain Huck">
+    <title>聊天室主页</title>
+    <script type="text/javascript" charset="UTF-8" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <div id="contents" style="width: 500px; height: 500px; overflow: auto"></div>
+    <div>
+        <input type="text" id="message"/>
+        <button onclick="sendMessage()">发送</button>
+    </div>
+    <script>
+        // 建立websocket链接
+        var ws = new WebSocket("ws://10.31.66.157:8000/chatroom");
+        ws.onmessage = function (e) {
+            $('#contents').append(e.data)
+        };
+
+        function sendMessage() {
+            var message = $('#message').val();
+            ws.send(message);
+            $('#message').val("")
+        }
+    </script>
+</body>
+</html>
