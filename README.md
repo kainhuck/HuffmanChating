@@ -34,7 +34,7 @@ chat_online文件夹下的在线聊天工程只需运行server.py文件
 >
 >因为该项目有注册页面,需要使用数据库,这里使用的数据库为Mysql5.6;另外注意Mysql8.0以上好像和pymysql不兼容会报错.
 >
->在数据库中创建名为users的表.内容为username和password;这里给出创建命令
+>在数据库中创建名为users的表.内容为username和password这里给出创建命令
 >
 >`CREATE TABLE users(username varchar(1000), password varchar(1000));`
 >
