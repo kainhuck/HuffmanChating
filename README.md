@@ -36,7 +36,7 @@ chat_online文件夹下的在线聊天工程只需运行server.py文件
 >
 >在数据库中创建名为users的表.内容为username和password;这里给出创建命令
 >
->`CREATE TABLE users(username varchar(1000), password(1000));`
+>`CREATE TABLE users(username varchar(1000), password varchar(1000));`
 >
 >注册时请勿使用中文
 >
@@ -63,5 +63,5 @@ chat_online文件夹下的在线聊天工程只需运行server.py文件
 
 *网页部分只对注册页面进行css美化,所以视觉上可能不是特别美观*
 
-如果云行时报huff_code为找到的错误请手动将huff_code文件夹下的huffman.py复制到chat_online文件夹下,并改动chat_onlie/views/index.py文件第7行 `from huff_code import huffman` 改为 `import huffman`保存之后再次运行server.py即可
+如果运行时报huff_code为找到的错误请手动将huff_code文件夹下的huffman.py复制到chat_online文件夹下,并改动chat_onlie/views/index.py文件第7行 `from huff_code import huffman` 改为 `import huffman`保存之后再次运行server.py即可
 
